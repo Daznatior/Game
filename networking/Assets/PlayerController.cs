@@ -6,41 +6,26 @@ using UnityEngine.Networking;
 public class PlayerController : NetworkBehaviour
 {
     public GameObject bulletPrefab;
+    public Camera cam;
     public int hp = 100;
+    public Vector3 offset;
+    public Quaternion rot;
 
 
+    private void Awake()
+    {
+        
 
-
-    // Update is called once per frame
-    void Update () {
-
-
-        if (!isLocalPlayer)
-        {
-            return;
-        }
-
-    
-
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 9.0f;
-
-        transform.Rotate(0, x, 0);
-        transform.Translate(0, 0, z);
-
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            CmdFire();
-        }
-
+        offset = new Vector3(0, 5, -3);
+        cam.transform.position = offset;
     }
-
-  
 
     public override void OnStartLocalPlayer()
     {
         GetComponent<MeshRenderer>().material.color = Color.blue;
         Debug.Log(hp);
+        
+       
     }
 
     [Command]
@@ -57,8 +42,8 @@ public class PlayerController : NetworkBehaviour
         // make bullet disappear after 2 seconds
 
         NetworkServer.Spawn(bullet);
-      
-        
+
+        Debug.Log("jews");
 
         Destroy(bullet, 2.0f);
     }
@@ -72,5 +57,43 @@ public class PlayerController : NetworkBehaviour
 
 
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
+        if(cam.enabled == false)
+        {
+            cam.enabled = true;
+        }
+
+
+
+        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+        var z = Input.GetAxis("Vertical") * Time.deltaTime * 9.0f;
+
+
+        cam.transform.position = this.transform.position + offset;
+
+
+
+
+
+        transform.Rotate(0, x, 0);
+        transform.Translate(0, 0, z);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CmdFire();
+        }
+
+    }
+
 
 }
