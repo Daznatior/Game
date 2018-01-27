@@ -10,13 +10,14 @@ public class update_menu : MonoBehaviour {
 	GameObject playerClone;
 	Vector3 menu1pos = new Vector3 (403f, 275f, -971f);
 	Vector3 menu2pos = new Vector3 (1711f, 275f, -971f);
+	Vector3 playerpos = new Vector3 (1180f, 34.00004f, -148.9999f);
 
 	int Y=0;
 	// Use this for initialization
 	void Start () {
 		var scene = SceneManager.GetSceneByName("menu");
 		SceneManager.SetActiveScene(scene);
-		playerClone = (GameObject)Instantiate (player, new Vector3(1727f,291f,-789f), transform.rotation);
+		playerClone = (GameObject)Instantiate (player, playerpos, transform.rotation);
 		playerClone.transform.localScale = new Vector3(20f,20f,20f);
 	}
 	
@@ -40,14 +41,14 @@ public class update_menu : MonoBehaviour {
 
 	public void tomainmenu()
 	{
-		GameObject.Find ("panel_main").GetComponent<CanvasGroup> ().alpha = 1f;
-		GameObject.Find ("panel_blockedit").GetComponent<CanvasGroup> ().alpha = 0f;
+		GameObject.Find ("panel_main").GetComponent<CanvasGroup> ().transform.position = new Vector3 (1301, 0, 0);
+		GameObject.Find ("panel_blockedit").GetComponent<CanvasGroup> ().transform.position = new Vector3 (0, 0, 0);
 	}
 
 	public void toblockedit()
 	{
-		GameObject.Find ("panel_main").GetComponent<CanvasGroup> ().alpha = 1f;
-		GameObject.Find ("panel_blockedit").GetComponent<CanvasGroup> ().alpha = 0f;
+		GameObject.Find ("panel_main").GetComponent<CanvasGroup> ().transform.position = new Vector3 (0, 0, 0);
+		GameObject.Find ("panel_blockedit").GetComponent<CanvasGroup> ().transform.position = new Vector3 (1301, 0, 0);
 	}
 }
 
