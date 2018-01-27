@@ -7,10 +7,14 @@ using UnityEngine.UI;
 public class dmg : NetworkBehaviour
 {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+
+   
+
+    // Use this for initialization
+    void Start () {
+       
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,10 +30,11 @@ public class dmg : NetworkBehaviour
         if (collision.gameObject.tag == "Player")
         {
 
-            GameObject.Find("Player").GetComponent<PlayerController>().hp = GameObject.Find("Player").GetComponent<PlayerController>().hp - 5;
+            GameObject.Find("Player").GetComponent<PlayerController>().hp -= 5;
 
-            
-            Debug.Log(GameObject.Find("Player").GetComponent<PlayerController>().hp);
+
+     
+            Debug.Log("we hit the player yay!");
         }
 
     }

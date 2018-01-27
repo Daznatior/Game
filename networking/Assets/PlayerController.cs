@@ -8,7 +8,7 @@ public class PlayerController : NetworkBehaviour
 {
     public GameObject bulletPrefab;
     public GameObject cany;
-    public Vector3 hpoffset = new Vector3(0,1,0);
+    public Vector3 hpoffset = new Vector3(0,6,0);
     public Camera cam;
     public Vector3 offset;
     public Quaternion rot;
