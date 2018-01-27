@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: 35843d38cfba84341a0b1e6c10833713
 <<<<<<< HEAD
+<<<<<<< HEAD
 timeCreated: 1517015949
+=======
+timeCreated: 1517015959
+>>>>>>> 0871af06cda246df3205f719d207dcba781bac8e
 =======
 timeCreated: 1517015959
 >>>>>>> 0871af06cda246df3205f719d207dcba781bac8e
@@ -12,7 +16,11 @@ MonoImporter:
   defaultReferences:
   - maincamera: {instanceID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - player: {fileID: 1898752851381352, guid: 8a0f86d34d4a92a4ba92d0c3fe529327, type: 2}
+=======
+  - player: {instanceID: 0}
+>>>>>>> 0871af06cda246df3205f719d207dcba781bac8e
 =======
   - player: {instanceID: 0}
 >>>>>>> 0871af06cda246df3205f719d207dcba781bac8e
