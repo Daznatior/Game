@@ -16,6 +16,7 @@ public class PlayerController : NetworkBehaviour
     {
         Camera camerathing = Instantiate(Resources.Load("personcam", typeof(Camera))) as Camera;
         offset = new Vector3(-0.68f, 19.31f, 26.65f);
+        cam = camerathing;
         cam.transform.position = offset;
     }
 
