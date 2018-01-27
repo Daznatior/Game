@@ -173,14 +173,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1349912864594290}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9300c8626b4ca214bba85fb3e5bbbef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1486444055612496, guid: 9ecedc886a8bfc844b99f5a8313dab40,
     type: 2}
-  cam: {fileID: 20049244377407044, guid: fe83da26772432a40a7dbb010ef2aa75, type: 2}
+  cam: {fileID: 0}
   hp: 100
   offset: {x: 0, y: 0, z: 0}
   rot: {x: 0, y: 0, z: 0, w: 0}

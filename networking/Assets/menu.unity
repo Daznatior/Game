@@ -923,9 +923,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 496770401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc3c19820cef8447a262fd11f3c6dfc, type: 3}
+  m_Script: {fileID: 11500000, guid: 35843d38cfba84341a0b1e6c10833713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maincamera: {fileID: 590625454}
+  player: {fileID: 1349912864594290, guid: 28be8ac751b25154ea3d4c9f204c1245, type: 2}
 --- !u!1 &501130207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,7 +1370,8 @@ CanvasRenderer:
 --- !u!1 &590625451
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 1051487511218020, guid: 78ee7b67689125a4eb3f7b4019c00fb2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
@@ -1386,21 +1389,24 @@ GameObject:
 --- !u!81 &590625452
 AudioListener:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 81401223018649276, guid: 78ee7b67689125a4eb3f7b4019c00fb2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 590625451}
   m_Enabled: 1
 --- !u!124 &590625453
 Behaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 124163609961551464, guid: 78ee7b67689125a4eb3f7b4019c00fb2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 590625451}
   m_Enabled: 1
 --- !u!20 &590625454
 Camera:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 20430593958658848, guid: 78ee7b67689125a4eb3f7b4019c00fb2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 590625451}
   m_Enabled: 1
@@ -1413,10 +1419,10 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
-  far clip plane: 100000
+  near clip plane: 0.1
+  far clip plane: 10000
   field of view: 31.2
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -1436,7 +1442,8 @@ Camera:
 --- !u!4 &590625455
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 4089032400102778, guid: 78ee7b67689125a4eb3f7b4019c00fb2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 590625451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1770,7 +1777,8 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 0}
+  m_PlayerPrefab: {fileID: 1349912864594290, guid: 28be8ac751b25154ea3d4c9f204c1245,
+    type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
   m_OfflineScene: menu
@@ -2207,7 +2215,7 @@ GameObject:
   - component: {fileID: 1707977037}
   - component: {fileID: 1707977036}
   m_Layer: 5
-  m_Name: Button_Customize
+  m_Name: returnto_main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2899,8 +2907,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: acc3c19820cef8447a262fd11f3c6dfc, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 496770406}
+        m_MethodName: toblockedit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
