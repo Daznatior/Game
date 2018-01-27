@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
-  showGUI: 1
+  showGUI: 0
   offsetX: 0
   offsetY: 0
 --- !u!114 &1309282477
@@ -1768,10 +1768,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e144b740a2efea74681549f8e6226a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NetworkPort: 20015
+  m_NetworkPort: 7777
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
-  m_NetworkAddress: 86.28.166.22
+  m_NetworkAddress: localhost
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
@@ -1783,8 +1783,7 @@ MonoBehaviour:
   m_PlayerSpawnMethod: 0
   m_OfflineScene: menu
   m_OnlineScene: level1
-  m_SpawnPrefabs:
-  - {fileID: 1486444055612496, guid: 9ecedc886a8bfc844b99f5a8313dab40, type: 2}
+  m_SpawnPrefabs: []
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:

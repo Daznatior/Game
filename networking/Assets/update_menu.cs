@@ -11,6 +11,9 @@ public class update_menu : MonoBehaviour {
 	Vector3 menu1pos = new Vector3 (403f, 275f, -971f);
 	Vector3 menu2pos = new Vector3 (1711f, 275f, -971f);
 	Vector3 playerpos = new Vector3 (1180f, 34.00004f, -148.9999f);
+	int menuinc=0,lastmenuinc;
+	float menucounter=0;
+	float offscreen=1300f;
 
 	int Y=0;
 	// Use this for initialization
@@ -36,19 +39,37 @@ public class update_menu : MonoBehaviour {
 		playerClone.transform.Rotate (Vector3.up * (Time.deltaTime*10f));
 		Y++;
 		GameObject.Find ("Button_Join").GetComponent<Button> ().colors = btncolors;
+		if (menuinc != lastmenuinc) {
+			if (menuinc == 1 && menucounter>0) {
+				GameObject.Find ("panel_main").GetComponent<RectTransform> ().localPosition = new Vector3 (-(offscreen)*((50-menucounter)/50f), 0, 0);
+				GameObject.Find ("panel_blockedit").GetComponent<RectTransform> ().localPosition = new Vector3 ((offscreen)*(menucounter/50f), 0, 0);
+				menucounter--;
+			}
+
+			if (menuinc == 2 && menucounter>0) {
+				GameObject.Find ("panel_main").GetComponent<RectTransform> ().localPosition = new Vector3 (-(offscreen)*((menucounter)/50f), 0, 0);
+				GameObject.Find ("panel_blockedit").GetComponent<RectTransform> ().localPosition = new Vector3 ((offscreen)*((50-menucounter)/50f), 0, 0);
+				menucounter--;
+			}
+
+
+			if (menucounter <= 0) {
+				lastmenuinc = menuinc;
+			}
+		}
 	}
 
 
 	public void tomainmenu()
 	{
-		GameObject.Find ("panel_main").GetComponent<CanvasGroup> ().transform.position = new Vector3 (1301, 0, 0);
-		GameObject.Find ("panel_blockedit").GetComponent<CanvasGroup> ().transform.position = new Vector3 (0, 0, 0);
+		menuinc = 2;
+		menucounter = 50f;
 	}
-
+	//
 	public void toblockedit()
 	{
-		GameObject.Find ("panel_main").GetComponent<CanvasGroup> ().transform.position = new Vector3 (0, 0, 0);
-		GameObject.Find ("panel_blockedit").GetComponent<CanvasGroup> ().transform.position = new Vector3 (1301, 0, 0);
+		menuinc = 1;
+		menucounter = 50f;
 	}
 }
 
