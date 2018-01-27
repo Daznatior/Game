@@ -15,7 +15,6 @@ public class PlayerController : NetworkBehaviour
     private void Awake()
     {
         Camera camerathing = Instantiate(Resources.Load("personcam", typeof(Camera))) as Camera;
-        camerathing = cam;
         offset = new Vector3(-0.68f, 19.31f, 26.65f);
         cam.transform.position = offset;
     }
