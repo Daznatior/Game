@@ -9,19 +9,19 @@ public class update_menu : MonoBehaviour {
 	public GameObject player;
 	GameObject playerClone;
 	Vector3 menu1pos = new Vector3 (403f, 275f, -971f);
-	Vector3 menu2pos = new Vector3 (1711f, 275f, -971f);
-	Vector3 playerpos = new Vector3 (1180f, 34.00004f, -148.9999f);
 	int menuinc=0,lastmenuinc;
 	float menucounter=0;
 	float offscreen=1300f;
+	Vector3 playerpos;
 
 	int Y=0;
 	// Use this for initialization
 	void Start () {
+		playerpos = new Vector3 (410.3f +offscreen,277.4f, -872.3f);
 		var scene = SceneManager.GetSceneByName("menu");
 		SceneManager.SetActiveScene(scene);
 		playerClone = (GameObject)Instantiate (player, playerpos, transform.rotation);
-		playerClone.transform.localScale = new Vector3(20f,20f,20f);
+		playerClone.transform.localScale = new Vector3(3f,3f,3f);
 	}
 	
 	// Update is called once per frame
@@ -42,6 +42,7 @@ public class update_menu : MonoBehaviour {
 		if (menuinc != lastmenuinc) {
 			if (menuinc == 1 && menucounter>0) {
 				GameObject.Find ("panel_main").GetComponent<RectTransform> ().localPosition = new Vector3 (-(offscreen)*((50-menucounter)/50f), 0, 0);
+				playerClone.transform.position = playerpos -new Vector3 ((offscreen)*(menucounter/50f), 0, 0);
 				GameObject.Find ("panel_blockedit").GetComponent<RectTransform> ().localPosition = new Vector3 ((offscreen)*(menucounter/50f), 0, 0);
 				menucounter--;
 			}

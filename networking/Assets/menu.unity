@@ -559,6 +559,7 @@ RectTransform:
   - {fileID: 2051813652}
   - {fileID: 517803314}
   - {fileID: 1360194582}
+  - {fileID: 1707977035}
   m_Father: {fileID: 496770405}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -906,7 +907,6 @@ RectTransform:
   m_Children:
   - {fileID: 1996460183}
   - {fileID: 336971126}
-  - {fileID: 1707977035}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maincamera: {fileID: 590625454}
-  player: {fileID: 1349912864594290, guid: 28be8ac751b25154ea3d4c9f204c1245, type: 2}
+  player: {fileID: 1898752851381352, guid: 8a0f86d34d4a92a4ba92d0c3fe529327, type: 2}
 --- !u!1 &501130207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1050,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6a3bcc8bf5e1a1948878270fcffd47c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c71996a5c29fe664186e05be3db050c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
-  showGUI: 0
+  showGUI: 1
   offsetX: 0
   offsetY: 0
 --- !u!114 &1309282477
@@ -1768,10 +1768,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e144b740a2efea74681549f8e6226a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NetworkPort: 7777
+  m_NetworkPort: 20015
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
-  m_NetworkAddress: localhost
+  m_NetworkAddress: 86.28.166.22
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
@@ -2228,16 +2228,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1707977034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 27}
-  m_LocalScale: {x: 1.64238, y: 1.64238, z: 1.64238}
+  m_LocalPosition: {x: 0, y: 0, z: 43.853054}
+  m_LocalScale: {x: 2.667717, y: 1.8248668, z: 2.667717}
   m_Children:
   - {fileID: 387187087}
-  m_Father: {fileID: 496770405}
-  m_RootOrder: 2
+  m_Father: {fileID: 336971126}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 1277.3, y: 57.8}
+  m_AnchoredPosition: {x: -6.82251, y: 21.333164}
   m_SizeDelta: {x: 191.5, y: 24.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1707977036
@@ -2279,8 +2279,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1309282477}
-        m_MethodName: JoinGame
+      - m_Target: {fileID: 496770406}
+        m_MethodName: tomainmenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2606,10 +2606,10 @@ RectTransform:
   m_Father: {fileID: 496770405}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 724, y: 620}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1996460184
 MonoBehaviour:
