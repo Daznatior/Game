@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 20281775538028654}
   - component: {fileID: 124358450277358812}
   - component: {fileID: 81721286550546394}
+  - component: {fileID: 114648785900115544}
   m_Layer: 0
   m_Name: personcam
   m_TagString: Untagged
@@ -85,6 +86,38 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1697807003235192}
   m_Enabled: 1
+--- !u!114 &114648785900115544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697807003235192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 254
+    i1: 131
+    i2: 218
+    i3: 38
+    i4: 119
+    i5: 36
+    i6: 50
+    i7: 164
+    i8: 10
+    i9: 125
+    i10: 187
+    i11: 1
+    i12: 14
+    i13: 242
+    i14: 170
+    i15: 117
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!124 &124358450277358812
 Behaviour:
   m_ObjectHideFlags: 1

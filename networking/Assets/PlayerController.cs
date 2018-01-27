@@ -12,18 +12,12 @@ public class PlayerController : NetworkBehaviour
     public Quaternion rot;
 
 
-    private void Awake()
+    public override void OnStartLocalPlayer()
     {
         Camera camerathing = Instantiate(Resources.Load("personcam", typeof(Camera))) as Camera;
         offset = new Vector3(-0.68f, 19.31f, 26.65f);
         cam = camerathing;
         cam.transform.position = offset;
-    }
-
-   
-
-    public override void OnStartLocalPlayer()
-    {
         GetComponent<MeshRenderer>().material.color = Color.blue;
         Debug.Log(hp);
        
