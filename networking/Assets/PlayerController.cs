@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class PlayerController : NetworkBehaviour
 {
     public GameObject bulletPrefab;
+    public GameObject cany;
+    public Vector3 hpoffset = new Vector3(0,1,0);
     public Camera cam;
-    public int hp = 100;
     public Vector3 offset;
     public Quaternion rot;
+
+    [SyncVar]
+    public int hp = 100;
 
 
     public override void OnStartLocalPlayer()
@@ -20,6 +25,8 @@ public class PlayerController : NetworkBehaviour
         cam.transform.position = offset;
         GetComponent<MeshRenderer>().material.color = Color.blue;
         Debug.Log(hp);
+        GameObject playerhps = Instantiate(Resources.Load("Playerhp", typeof(GameObject))) as GameObject;
+        cany = playerhps;
        
     }
 
@@ -38,7 +45,7 @@ public class PlayerController : NetworkBehaviour
 
         NetworkServer.Spawn(bullet);
 
-        Debug.Log("jews");
+ 
 
         Destroy(bullet, 2.0f);
     }
@@ -49,7 +56,11 @@ public class PlayerController : NetworkBehaviour
         {
             Debug.Log("hit ye ya fucking wall boii");
         }
-
+        if (collision.gameObject.tag == "Player")
+        {
+            hp = hp - 5;
+            Debug.Log(hp);
+        }
 
     }
 
@@ -76,7 +87,7 @@ public class PlayerController : NetworkBehaviour
 
         cam.transform.position = this.transform.position + offset;
 
-
+        cany.transform.position = this.transform.position + hpoffset;
 
 
 
