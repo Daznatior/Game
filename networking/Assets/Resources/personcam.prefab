@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4006930380722976}
   - component: {fileID: 20281775538028654}
   - component: {fileID: 124358450277358812}
-  - component: {fileID: 81721286550546394}
   - component: {fileID: 114648785900115544}
   m_Layer: 0
   m_Name: personcam
@@ -79,13 +78,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &81721286550546394
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1697807003235192}
-  m_Enabled: 1
 --- !u!114 &114648785900115544
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -14,6 +14,9 @@ public class update_menu : MonoBehaviour {
 	float offscreen=1300f;
 	Vector3 playerpos;
 
+    //darrenshitty vars
+    public InputField shite;
+
 	int Y=0;
 	// Use this for initialization
 	void Start () {
@@ -22,6 +25,12 @@ public class update_menu : MonoBehaviour {
 		SceneManager.SetActiveScene(scene);
 		playerClone = (GameObject)Instantiate (player, playerpos, transform.rotation);
 		playerClone.transform.localScale = new Vector3(3f,3f,3f);
+
+        //darrens shite
+        //need to enable my name input field fk it
+
+        shite.ActivateInputField();
+
 	}
 	
 	// Update is called once per frame

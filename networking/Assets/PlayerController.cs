@@ -12,6 +12,7 @@ public class PlayerController : NetworkBehaviour
     public Camera cam;
     public Vector3 offset;
     public Quaternion rot;
+    public GameObject nameofplayerholder;
 
     [SyncVar]
     public int hp = 100;
@@ -27,7 +28,9 @@ public class PlayerController : NetworkBehaviour
         Debug.Log(hp);
         GameObject playerhps = Instantiate(Resources.Load("Playerhp", typeof(GameObject))) as GameObject;
         cany = playerhps;
-       
+        nameofplayerholder = Instantiate(Resources.Load("playernameholder", typeof(GameObject))) as GameObject;
+        GameObject.FindGameObjectWithTag("playerhp").GetComponent<Text>().text = nameofplayerholder.GetComponent<name>().playername;
+
     }
 
     [Command]
@@ -40,7 +43,7 @@ public class PlayerController : NetworkBehaviour
 
 
         // make the bullet move away in front of the player
-        bullet.GetComponent<Rigidbody>().velocity = transform.forward * 8;
+        bullet.GetComponent<Rigidbody>().velocity = transform.forward + this.transform.forward * 8;
         // make bullet disappear after 2 seconds
 
         NetworkServer.Spawn(bullet);

@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 114810663040471550}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: playerhp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Martin
+  m_Text: 
 --- !u!114 &114810945716933574
 MonoBehaviour:
   m_ObjectHideFlags: 1
